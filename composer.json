@@ -9,7 +9,7 @@
     ],
     "autoload": {
 	"psr-4": {
-	    "expsys\\yii2": "source"
+	    "expsys\\yii2\\": "source"
 	}
     },
     "require": {
