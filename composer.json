@@ -1,19 +1,18 @@
 {
-    "name": "expsys/yii2",
-    "description": "Расширение классов для фреймфорка Yii2",
-    "authors": [
-        {
-            "name": "Evgenii Ignatev",
-            "email": "ignatev0173@gmail.com"
-        }
-    ],
-    "autoload": {
-	"psr-4": {
-	    "expsys\\yii2\\": "source"
-	}
+	"name": "expsys/yii2",
+	"description": "Расширение классов для фреймфорка Yii2",
+	"authors": [
+		{
+			"name": "Evgenii Ignatev",
+			"email": "ignatev0173@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"expsys\\yii2\\": "source"
+		}
     },
-    "require": {
-        "yiisoft/yii2": "^2.0",
-        "fxp/composer-asset-plugin": "~1.0.0"
-    }
+	"require": {
+		"yiisoft/yii2": "^2.0"
+	}
 }
