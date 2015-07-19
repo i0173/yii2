@@ -11,8 +11,9 @@
 		"psr-4": {
 			"expsys\\yii2\\": "source"
 		}
-    },
+	},
 	"require": {
-		"yiisoft/yii2": "^2.0@dev"
+		"yiisoft/yii2": "^2.0@dev",
+		"codeception/codeception": "^2.1"
 	}
 }
