@@ -7,11 +7,11 @@
 			"email": "ignatev0173@gmail.com"
 		}
 	],
+
 	"autoload": {
-		"psr-0": {
-			"Expsys\\Yii2\\": "source/"
-		}
+		"classmap": ["source/"]
 	},
+
 	"require": {
 		"yiisoft/yii2": "^2.0@dev",
 		"codeception/codeception": "^2.1"
