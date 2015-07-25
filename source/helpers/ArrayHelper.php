@@ -7,7 +7,7 @@ namespace Expsys\Yii2\Helpers;
  * @see \yii\helpers\ArrayHelper
  */
 
-class ArrayHelper extends yii\helpers\ArrayHelper
+class ArrayHelper extends \yii\helpers\ArrayHelper
 {
 	/**
 	 * @brief Возвращает true, если переменная $var является массивом, false - в ином случае.
