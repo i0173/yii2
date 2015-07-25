@@ -45,6 +45,18 @@ class AssertHelper
 	}
 
 	/**
+	 * @brief Возвращает true, если переменная $var является null,
+	 * false - в ином случае.
+	 * @param mixed $var Проверяемая переменная
+	 * @return bool
+	 */
+
+	public static function isNull($var)
+	{
+		return $var === null;
+	}
+
+	/**
 	 * @brief Возвращает true, если переменная $var является числом,
 	 * false - в ином случае.
 	 * @param mixed $var Проверяемая переменная
