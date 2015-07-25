@@ -24,10 +24,11 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 	 * @brief Добавляет элемент $element в массив $array.
 	 * @param array $array Целевой массив
 	 * @param mixed $element Добавляемый элемент
-	 * @return array Новый массив с добавленным элементом
+	 * @return void
 	 */
 
 	public static function push(array & $array, $element)
 	{
+		array_push($array, $element);
 	}
 }
