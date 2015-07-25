@@ -1,6 +1,6 @@
 <?php
 
-namespace expsys\yii2\base;
+namespace Expsys\Yii2\Base;
 
 /**
  * @brief Расширение стандартного класса.

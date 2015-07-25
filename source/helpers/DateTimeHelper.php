@@ -1,6 +1,6 @@
 <?php
 
-namespace expsys\yii2\helpers;
+namespace Expsys\Yii2\Helpers;
 
 /**
  * @brief Вспомогательный класс для работы с датой-временем.
