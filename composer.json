@@ -8,8 +8,8 @@
 		}
 	],
 	"autoload": {
-		"psr-4": {
-			"Expsys\\Yii2\\": "source"
+		"psr-0": {
+			"Expsys\\Yii2\\": "source/"
 		}
 	},
 	"require": {
