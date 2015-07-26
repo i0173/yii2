@@ -36,6 +36,18 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 
 	public static function isEmpty(array $array, $strict = true)
 	{
+		return static::isNotEmpty($array, $strict);
+	}
+
+	/**
+	 * @brief Возвращает true, если массив $array не является пустым, false - в ином случае.
+	 * @param array $array Целевой массив
+	 * @param bool $strict Строкий и нестрогий метод проберки
+	 * @return bool
+	 */
+
+	public static function isNotEmpty(array $array, $strict = true)
+	{
 		$callback = function($value) {
 			return AssertHelper::isNumeric($value) ?
 				true : (bool) $value;
