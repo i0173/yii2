@@ -42,8 +42,8 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 		};
 
 		return $strict ?
-			static::filter($array, $callback) :
-			static::filter($array);
+			(bool) static::filter($array, $callback) :
+			(bool) static::filter($array);
 	}
 
 	/**
