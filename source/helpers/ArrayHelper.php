@@ -1,6 +1,7 @@
 <?php
 
 namespace Expsys\Yii2\Helpers;
+use \Closure;
 
 /**
  * @brief Расширение стандартного класса.
@@ -30,5 +31,19 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 	public static function push(array & $array, $element)
 	{
 		array_push($array, $element);
+	}
+
+	/**
+	 * @brife Применяет пользовательскую функцию $callback
+	 * ко всем элементам массива $array.
+	 * @param array $array Целевой массив
+	 * @param Closure $callback Пользовательская функция
+	 * @param mixed $userdata Дополнительные данные, передаваемые в $callback
+	 * @return bool Результат выполнения операции
+	 */
+
+	public static function walk(array & $array, Closure $callback, $userdata = null)
+	{
+		return array_walk($array, $callback, $userdata);
 	}
 }
