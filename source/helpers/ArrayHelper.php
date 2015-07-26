@@ -36,7 +36,7 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 
 	public static function isEmpty(array $array, $strict = true)
 	{
-		return static::isNotEmpty($array, $strict);
+		return !static::isNotEmpty($array, $strict);
 	}
 
 	/**
