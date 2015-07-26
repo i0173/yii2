@@ -81,7 +81,7 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 		$std = (object) $array;
 		foreach ($std as $key => $value) {
 			$std->{$key} = AssertHelper::isArray($value) ?
-				static::toStd($array) : $value;
+				static::toStd($value) : $value;
 		}
 
 		return $std;
