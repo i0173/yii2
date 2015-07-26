@@ -11,14 +11,39 @@ use \Closure;
 class ArrayHelper extends \yii\helpers\ArrayHelper
 {
 	/**
-	 * @brief Возвращает true, если переменная $var является массивом, false - в ином случае.
-	 * @param mixed $var Проверяемая переменная.
+	 * @brief Обходит каждое значение массива $array, передавая его
+	 * в $callback-функцию. Если $callback-функция возвращает true,
+	 * данное значение из $array возвращается в результирующий массив.
+	 * @param array $array Целевой массив
+	 * @param Closure $callback Пользовательская функция
+	 * @param int $flag Флаг определяющий какие аргументы передавать в $callback
+	 * @return array Результирующий массив
+	 */
+
+	public static function filter(array $array, Closure $callback = null, $flag = 0)
+	{
+		return $callback ?
+			array_filter($array, $callback, $flag) :
+			array_filter($array);
+	}
+
+	/**
+	 * @brief Возвращает true, если массив $array является пустым, false - в ином случае.
+	 * @param array $array Целевой массив
+	 * @param bool $strict Строкий и нестрогий метод проберки
 	 * @return bool
 	 */
 
-	public static function isArray($var)
+	public static function isEmpty(array $array, $strict = true)
 	{
-		return is_array($var);
+		$callback = function($value) {
+			return AssertHelper::isNumeric($value) ?
+				true : (bool) $value;
+		};
+
+		return $strict ?
+			static::filter($array, $callback) :
+			static::filter($array);
 	}
 
 	/**
