@@ -71,6 +71,23 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
 	}
 
 	/**
+	 * @brief Рекурсивно конвертирует массив $array в объект.
+	 * @param array $array Целевой массив
+	 * @return \stdClass
+	 */
+
+	public static function toStd(array $array)
+	{
+		$std = (object) $array;
+		foreach ($std as $key => $value) {
+			$std->{$key} = AssertHelper::isArray($value) ?
+				static::toStd($array) : $value;
+		}
+
+		return $std;
+	}
+
+	/**
 	 * @brife Применяет пользовательскую функцию $callback
 	 * ко всем элементам массива $array.
 	 * @param array $array Целевой массив
