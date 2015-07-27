@@ -33,6 +33,18 @@ class AssertHelper
 	}
 
 	/**
+	 * @brief Возвращает true, если переменная $var является числом с плавающей точкой,
+	 * false - в ином случае.
+	 * @param mixed $var Проверяемая переменная
+	 * @return bool
+	 */
+
+	public static function isFloat($var)
+	{
+		return is_float($var);
+	}
+
+	/**
 	 * @brief Возвращает true, если переменная $var является целым числом,
 	 * false - в ином случае.
 	 * @param mixed $var Проверяемая переменная
